@@ -47,16 +47,22 @@ class _LogInState extends State<LogIn> {
               SizedBox(
                 height: 50,
               ),
-              const welcome(),
+              EdginaBooksStore(),
               SizedBox(
-                height: 60,
+                height: 50,
               ),
               Row(
                 children: [
-                  Text("Email"),
+                  const Text(
+                    "email",
+                    style: TextStyle(fontSize: 15, fontFamily: 'helmet',
+                    color: Color.fromARGB(255, 165, 165, 165)),
+                  ),
                 ],
               ),
-              SizedBox(height:10,),
+              SizedBox(
+                height: 10,
+              ),
               TextFormField(
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
@@ -66,7 +72,18 @@ class _LogInState extends State<LogIn> {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 30,
+              ),
+              Row(
+                children: [
+                  Text(
+                    "password",
+                    style: TextStyle(fontSize: 13, fontFamily: 'helmet',color: Color.fromARGB(255, 165, 165, 165)),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 10,
               ),
               TextFormField(
                 keyboardType: TextInputType.visiblePassword,
@@ -109,15 +126,8 @@ class _LogInState extends State<LogIn> {
       )),
     );
   }
-}
 
-class welcome extends StatelessWidget {
-  const welcome({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
+  Text EdginaBooksStore() {
     return Text(
       "Welcome to Edgina Books Store",
       style: TextStyle(fontSize: 20, fontFamily: 'playbold'),
