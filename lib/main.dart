@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uts_2020130035/login.dart';
+import 'package:uts_2020130035/LoginScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,8 +14,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'UTS EDGINA - 2020130035',
       theme: ThemeData(
-        // fontFamily: 'Abereto',
-      ),
+          // fontFamily: 'Abereto',
+          ),
       home: const LogIn(),
     );
   }
