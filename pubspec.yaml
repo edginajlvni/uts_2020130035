@@ -94,6 +94,11 @@ flutter:
         - asset: assets/fonts/AveriaSans-BoldItalic.ttf
           weight: 100
 
+    - family: kaisei
+      fonts:
+        - asset: assets/fonts/KaiseiHarunoUmi-Regular.ttf
+          weight: 100
+
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
