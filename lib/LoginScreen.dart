@@ -47,7 +47,7 @@ class _LogInState extends State<LogIn> {
               SizedBox(
                 height: 50,
               ),
-              EdginaBooksStore(),
+              Shop(),
               SizedBox(
                 height: 50,
               ),
@@ -133,9 +133,9 @@ class _LogInState extends State<LogIn> {
     );
   }
 
-  Text EdginaBooksStore() {
+  Text Shop() {
     return Text(
-      "Welcome to Edgina Books Store",
+      "Welcome to Edgina Shop",
       style: TextStyle(fontSize: 20, fontFamily: 'playbold'),
     );
   }

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:uts_2020130035/screen/jacket_page.dart';
+import 'package:uts_2020130035/widget/griditems.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -7,11 +9,20 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<HomeScreen>
+    with SingleTickerProviderStateMixin {
+  TabController? _tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 4, vsync: this);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(108, 202, 139, 139),
+      backgroundColor: Color.fromARGB(108, 255, 214, 245),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(children: [
@@ -22,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     Icon(
                       Icons.menu,
-                      color: Colors.white,
+                      color: const Color.fromARGB(255, 0, 0, 0),
                       size: 25,
                     ),
                     Container(
@@ -31,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         onTap: () {},
                         child: Icon(
                           Icons.search,
-                          color: Colors.white,
+                          color: const Color.fromARGB(255, 0, 0, 0),
                           size: 25,
                         ),
                       ),
@@ -55,40 +66,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            GridView.count(
-              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-              crossAxisSpacing: 20,
-              mainAxisSpacing: 20,
-              scrollDirection: Axis.vertical,
-              crossAxisCount: 2,
-              childAspectRatio: 0.8,
-              shrinkWrap: true,
-              children: [
-                for (int i = 1; i < 7; i++)
-                  Container(
-                      padding: EdgeInsets.symmetric(horizontal: 10),
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10),
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.grey.withOpacity(0.5),
-                                spreadRadius: 4,
-                                blurRadius: 8)
-                          ]),
-                      child: Column(
-                        children: [
-                          InkWell(
-                              onTap: () {},
-                              child: Container(
-                                  margin: const EdgeInsets.all(10),
-                                  child: Image.asset("images/$i.png",
-                                  height: 160,
-                                  width: 160,))),
-                        ],
-                      ))
-              ],
-            )
+            SizedBox(
+              height: 20,
+            ),
+            GridItems(),
           ]),
         ),
       ),
