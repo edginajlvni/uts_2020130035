@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:uts_2020130035/ProductScreen.dart';
 import 'package:uts_2020130035/widget/griditems.dart';
+import 'package:uts_2020130035/widget/items.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -68,11 +70,13 @@ class _HomeScreenState extends State<HomeScreen>
             SizedBox(
               height: 20,
             ),
-            GridItems(),
+            Items(),
             Container(
               padding: EdgeInsets.all(16),
               child: InkWell(
-                onTap: () {},
+                onTap: () {
+                  
+                },
                 child: Icon(
                   Icons.trolley,
                   color: const Color.fromARGB(255, 0, 0, 0),

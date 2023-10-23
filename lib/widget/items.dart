@@ -1,30 +1,74 @@
 import 'package:flutter/material.dart';
+import 'package:uts_2020130035/ProductScreen.dart';
 
 class Items extends StatelessWidget {
-  const Items({super.key});
+  List names = [
+    'Jaket Boomber',
+    'Hoodie Cokelat',
+    'Jaket Bulu-Bulu',
+    'Kardigan Kupu-Kupu',
+    'Jaket Denim',
+    'Jaket Varsity Hijau',
+  ];
 
   @override
   Widget build(BuildContext context) {
     return GridView.count(
-      padding: EdgeInsets.all(25),
+      physics: NeverScrollableScrollPhysics(),
       crossAxisCount: 2,
-      children: <Widget>[
-        Card(
-          margin: EdgeInsets.all(8),
-          child: InkWell(
-              onTap: () {},
-              splashColor: Colors.blue,
-              child: Center(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    Icon(
-                      Icons.home,),
-                      Text("Home",)
-                  ],
+      shrinkWrap: true,
+      childAspectRatio: (150 / 195),
+      children: [
+        for (int i = 0; i < names.length; i++)
+          Container(
+            padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+            margin: EdgeInsets.symmetric(vertical: 8, horizontal: 13),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: Color.fromARGB(255, 248, 227, 248),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.4),
+                    spreadRadius: 1,
+                    blurRadius: 8,
+                  ),
+                ]),
+            child: Column(children: [
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ProductScreen(names[i])));
+                },
+                child: Container(
+                  margin: EdgeInsets.all(10),
+                  child: Image.asset(
+                    "assets/images/${names[i]}.png",
+                    height: 100,
+                    width: 100,
+                    // fit: BoxFit.contain,
+                  ),
                 ),
-              )),
-        )
+              ),
+              Padding(
+                padding: EdgeInsets.only(bottom: 8),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Column(
+                    children: [
+                      Text(
+                        names[i],
+                        style: TextStyle(
+                          fontSize: 13,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              )
+            ]),
+          )
       ],
     );
   }
