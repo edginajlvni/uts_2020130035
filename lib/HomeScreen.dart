@@ -55,6 +55,40 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
+            GridView.count(
+              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+              crossAxisSpacing: 20,
+              mainAxisSpacing: 20,
+              scrollDirection: Axis.vertical,
+              crossAxisCount: 2,
+              childAspectRatio: 0.8,
+              shrinkWrap: true,
+              children: [
+                for (int i = 1; i < 7; i++)
+                  Container(
+                      padding: EdgeInsets.symmetric(horizontal: 10),
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.grey.withOpacity(0.5),
+                                spreadRadius: 4,
+                                blurRadius: 8)
+                          ]),
+                      child: Column(
+                        children: [
+                          InkWell(
+                              onTap: () {},
+                              child: Container(
+                                  margin: const EdgeInsets.all(10),
+                                  child: Image.asset("images/$i.png",
+                                  height: 160,
+                                  width: 160,))),
+                        ],
+                      ))
+              ],
+            )
           ]),
         ),
       ),

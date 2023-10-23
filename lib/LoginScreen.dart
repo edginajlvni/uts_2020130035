@@ -55,8 +55,10 @@ class _LogInState extends State<LogIn> {
                 children: [
                   const Text(
                     "email",
-                    style: TextStyle(fontSize: 15, fontFamily: 'helmet',
-                    color: Color.fromARGB(255, 165, 165, 165)),
+                    style: TextStyle(
+                        fontSize: 15,
+                        fontFamily: 'helmet',
+                        color: Color.fromARGB(255, 165, 165, 165)),
                   ),
                 ],
               ),
@@ -67,6 +69,7 @@ class _LogInState extends State<LogIn> {
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
                   labelText: "Email",
+                  hintText: "neko@neko.com",
                   border: OutlineInputBorder(),
                   prefixIcon: Icon(Icons.email),
                 ),
@@ -78,7 +81,10 @@ class _LogInState extends State<LogIn> {
                 children: [
                   Text(
                     "password",
-                    style: TextStyle(fontSize: 13, fontFamily: 'helmet',color: Color.fromARGB(255, 165, 165, 165)),
+                    style: TextStyle(
+                        fontSize: 15,
+                        fontFamily: 'helmet',
+                        color: Color.fromARGB(255, 165, 165, 165)),
                   ),
                 ],
               ),
