@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:uts_2020130035/screen/jacket_page.dart';
 import 'package:uts_2020130035/widget/griditems.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -70,6 +69,17 @@ class _HomeScreenState extends State<HomeScreen>
               height: 20,
             ),
             GridItems(),
+            Container(
+              padding: EdgeInsets.all(16),
+              child: InkWell(
+                onTap: () {},
+                child: Icon(
+                  Icons.trolley,
+                  color: const Color.fromARGB(255, 0, 0, 0),
+                  size: 25,
+                ),
+              ),
+            ),
           ]),
         ),
       ),
