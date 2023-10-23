@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uts_2020130035/ProductScreen.dart';
 
 class GridItems extends StatelessWidget {
   var pNames = [
@@ -23,6 +24,13 @@ class GridItems extends StatelessWidget {
       itemBuilder: (context, index) {
         return InkWell(
           onTap: () {},
+          child: MaterialButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ProductScreen()));
+                  },
           child: Container(
               margin: EdgeInsets.all(10),
               decoration: BoxDecoration(
@@ -78,7 +86,7 @@ class GridItems extends StatelessWidget {
                   ],
                 ),
               )),
-        );
+         ) );
       },
     );
   }
