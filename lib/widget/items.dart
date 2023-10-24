@@ -5,8 +5,8 @@ class Items extends StatelessWidget {
   List names = [
     'Jaket Boomber',
     'Hoodie Cokelat',
-    'Jaket Bulu-Bulu',
-    'Kardigan Kupu-Kupu',
+    'Jaket Kulit',
+    'Sweater',
     'Jaket Denim',
     'Jaket Varsity Hijau',
   ];
@@ -45,11 +45,14 @@ class Items extends StatelessWidget {
                   margin: EdgeInsets.all(10),
                   child: Image.asset(
                     "assets/images/${names[i]}.png",
-                    height: 100,
-                    width: 100,
+                    height: 110,
+                    width: 110,
                     // fit: BoxFit.contain,
                   ),
                 ),
+              ),
+              SizedBox(
+                height: 30,
               ),
               Padding(
                 padding: EdgeInsets.only(bottom: 8),
@@ -59,10 +62,26 @@ class Items extends StatelessWidget {
                     children: [
                       Text(
                         names[i],
-                        style: TextStyle(
-                          fontSize: 13,
-                        ),
+                        style: TextStyle(fontSize: 15, fontFamily: 'helmet'),
                       ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(bottom: 5),
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Column(
+                            children: [
+                              Text(
+                                "Rp. 90.000",
+                                style: TextStyle(
+                                    fontSize: 15, fontFamily: 'helmet'),
+                              ),
+                            ],
+                          ),
+                        ),
+                      )
                     ],
                   ),
                 ),

@@ -70,7 +70,9 @@ flutter:
     - assets/images/Jaket Denim.png
     - assets/images/Hoodie Cokelat.png
     - assets/images/Kardigan Kupu-Kupu.png
+    - assets/images/Jaket Kulit.png
     - assets/images/buku.png
+    - assets/images/Sweater.png
 
 
 
@@ -109,6 +111,13 @@ flutter:
       fonts:
         - asset: assets/fonts/KaiseiHarunoUmi-Regular.ttf
           weight: 100
+    
+    - family: dmsans
+      fonts:
+        - asset: assets/fonts/DMSans_Regular.ttf
+          weight: 100
+
+    
 
   #   - family: Schyler
   #     fonts:

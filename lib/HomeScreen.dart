@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uts_2020130035/CartScreen.dart';
 import 'package:uts_2020130035/ProductScreen.dart';
 import 'package:uts_2020130035/widget/griditems.dart';
 import 'package:uts_2020130035/widget/items.dart';
@@ -75,15 +76,22 @@ class _HomeScreenState extends State<HomeScreen>
               padding: EdgeInsets.all(16),
               child: InkWell(
                 onTap: () {
-                  
-                },
+                          Navigator.pop(context);
+                        },
+                        child: MaterialButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const CartScreen()));
+                          },
                 child: Icon(
                   Icons.trolley,
                   color: const Color.fromARGB(255, 0, 0, 0),
                   size: 25,
                 ),
               ),
-            ),
+            )),
           ]),
         ),
       ),
