@@ -80,7 +80,7 @@ class ItemCart extends StatelessWidget {
                                   "x 1",
                                   style: TextStyle(
                                     fontFamily: 'averia',
-                                    fontSize: 15,
+                                    fontSize: 10,
                                   ),
                                 ),
                                 SizedBox(width: 3),
@@ -88,7 +88,7 @@ class ItemCart extends StatelessWidget {
                                   "= Rp. 90.000",
                                   style: TextStyle(
                                     fontFamily: 'averia',
-                                    fontSize: 15,
+                                    fontSize: 10,
                                   ),
                                 ),
                               ],

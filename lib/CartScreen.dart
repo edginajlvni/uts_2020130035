@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:uts_2020130035/HomeScreen.dart';
+import 'package:uts_2020130035/cart/bottom.dart';
 import 'package:uts_2020130035/cart/itemcart.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
-
 
   @override
   Widget build(BuildContext context) {
@@ -54,9 +54,13 @@ class CartScreen extends StatelessWidget {
                     ),
                     SizedBox(height: 20),
                     ItemCart(),
+                    SizedBox(height: 100),
+
+                    //  F
                   ],
                 ),
               ),
+              Bottom(),
             ],
           ),
         )),

@@ -31,7 +31,7 @@ class _LogInState extends State<LogIn> {
       //   selectedItemColor: const Color.fromARGB(255, 0, 81, 255),
       //   onTap: _onItemTap,
       // ),
-      backgroundColor: Color.fromARGB(255, 233, 233, 233),
+      backgroundColor: Color.fromARGB(255, 253, 253, 253),
       body: SingleChildScrollView(
           child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 60),
@@ -41,7 +41,7 @@ class _LogInState extends State<LogIn> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                'assets/images/buku.png',
+                'assets/images/ol.jpg',
                 height: 200,
                 width: 200,
               ),
@@ -115,7 +115,7 @@ class _LogInState extends State<LogIn> {
                   child: Container(
                       height: 50,
                       decoration: BoxDecoration(
-                          color: Color.fromARGB(104, 8, 8, 8),
+                          color: Color.fromARGB(104, 11, 1, 12),
                           borderRadius: BorderRadius.circular(5)),
                       child: Center(
                         child: Text("Log In",
