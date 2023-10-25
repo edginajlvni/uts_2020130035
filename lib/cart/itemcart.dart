@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ItemCart extends StatelessWidget {
-  List names = [
+  var pnames = [
     'Jaket Boomber',
     'Sweater',
     'Jaket Denim',
@@ -27,7 +27,7 @@ class ItemCart extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.only(top: 0, left: 10, right: 10),
+        padding: EdgeInsets.only(top: 0, left: 10, right: 5),
         child: Column(
           children: [
             for (int i = 0; i < 4; i++)
@@ -43,16 +43,61 @@ class ItemCart extends StatelessWidget {
                   Container(
                     height: 100,
                     width: MediaQuery.of(context).size.width / 4,
+                    padding: EdgeInsets.all(10),
                     margin: EdgeInsets.only(left: 8),
                     decoration: BoxDecoration(
                       color: Color.fromARGB(255, 255, 211, 254),
                       borderRadius: BorderRadius.circular(5),
                     ),
-                    child: Image.asset("assets/images/${names[i]}.png"),
+                    child: Image.asset("assets/images/${pnames[i]}.png"),
+                  ),
+                  Container(
+                    width: MediaQuery.of(context).size.width / 1.8,
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 15, top: 20, bottom: 25),
+                      child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              pnames[i],
+                              style: TextStyle(
+                                fontFamily: 'averia',
+                                fontSize: 15,
+                              ),
+                            ),
+                            Row(
+                              children: [
+                                Text(
+                                  harga[i],
+                                  style: TextStyle(
+                                    fontFamily: 'averia',
+                                    fontSize: 15,
+                                  ),
+                                ),
+                                SizedBox(width: 3),
+                                Text(
+                                  "x 1",
+                                  style: TextStyle(
+                                    fontFamily: 'averia',
+                                    fontSize: 15,
+                                  ),
+                                ),
+                                SizedBox(width: 3),
+                                Text(
+                                  "= Rp. 90.000",
+                                  style: TextStyle(
+                                    fontFamily: 'averia',
+                                    fontSize: 15,
+                                  ),
+                                ),
+                              ],
+                            )
+                          ]),
+                    ),
                   )
                 ]),
               ),
-            
           ],
         ),
       ),

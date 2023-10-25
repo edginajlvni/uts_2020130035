@@ -11,6 +11,15 @@ class Items extends StatelessWidget {
     'Jaket Varsity Hijau',
   ];
 
+  var harga = [
+    "Rp. 90.000",
+    "Rp. 190.000",
+    "Rp. 250.000",
+    "Rp. 80.000",
+    "Rp. 128.000",
+    "Rp. 118.000",
+  ];
+
   @override
   Widget build(BuildContext context) {
     return GridView.count(
