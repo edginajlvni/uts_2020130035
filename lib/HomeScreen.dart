@@ -60,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen>
                     "Our Product",
                     style: TextStyle(
                       fontFamily: "kaisei",
-                      fontSize: 30,
+                      fontSize: 25,
                       color: const Color.fromARGB(255, 12, 12, 12),
                       fontWeight: FontWeight.bold,
                     ),

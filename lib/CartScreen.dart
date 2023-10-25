@@ -7,33 +7,35 @@ class CartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.indigo,
-      body: SingleChildScrollView(
-          child: SafeArea(
-            child: Padding(
-              padding: EdgeInsets.only(top: 30, bottom: 20),
+      appBar: AppBar(
+        backgroundColor: Colors.deepPurpleAccent,
+        elevation: 0,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const HomeScreen()));
+          },
+          icon: Icon(Icons.arrow_back_ios_new),
+        ),
+      ),
+
+      body: Container(
+              alignment: Alignment.centerLeft,
+              padding: EdgeInsets.only(right: 25, left: 15, top: 30),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Padding(
-                      padding: EdgeInsets.only(left: 1),
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.pop(context);
-                        },
-                        child: MaterialButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const HomeScreen()));
-                          },
-                          child: const Icon(
-                            Icons.arrow_back_ios_new,
-                          ),
-                        ),
-                      )),]
-      )
-    ))));
+                  Text(
+                    "Cart",
+                    style: TextStyle(
+                      fontFamily: "kaisei",
+                      fontSize: 25,
+                      color: const Color.fromARGB(255, 12, 12, 12),
+                      fontWeight: FontWeight.bold,
+                    ),
+                  )
+                ],
+              ),
+            ),
+    );
   }
 }
