@@ -134,7 +134,7 @@ class ProductScreen extends StatelessWidget {
                             Container(
                               padding: EdgeInsets.all(20),
                               decoration: BoxDecoration(
-                                color: Colors.black,
+                                color: Color.fromARGB(255, 25, 46, 231),
                               ),
                               child: Text("Add to Cart",
                               style: TextStyle(color: Colors.white),),
