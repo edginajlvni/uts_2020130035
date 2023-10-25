@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:uts_2020130035/CartScreen.dart';
 import 'package:uts_2020130035/HomeScreen.dart';
 
 class ProductScreen extends StatelessWidget {
@@ -121,7 +122,7 @@ class ProductScreen extends StatelessWidget {
                                     size: 10,
                                   ),
                                   SizedBox(width: 15),
-                                  Text("2"),
+                                  Text("01"),
                                   SizedBox(width: 15),
                                   Icon(
                                     CupertinoIcons.plus,
@@ -130,15 +131,27 @@ class ProductScreen extends StatelessWidget {
                                 ],
                               ),
                             ),
-
-                            Container(
-                              padding: EdgeInsets.all(20),
-                              decoration: BoxDecoration(
-                                color: Color.fromARGB(255, 25, 46, 231),
-                              ),
-                              child: Text("Add to Cart",
-                              style: TextStyle(color: Colors.white),),
-                            )
+                            InkWell(
+                              onTap: () {},
+                              child: MaterialButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const CartScreen()));
+                                  },
+                                  child: Container(
+                                    padding: EdgeInsets.all(20),
+                                    decoration: BoxDecoration(
+                                      color: Color.fromARGB(255, 25, 46, 231),
+                                    ),
+                                    child: Text(
+                                      "Add to Cart",
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                  )),
+                            ),
                           ],
                         ),
                       ),
