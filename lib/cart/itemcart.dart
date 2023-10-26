@@ -36,7 +36,7 @@ class ItemCart extends StatelessWidget {
                 height: 110,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 255, 230, 250),
+                  color: Color.fromARGB(255, 255, 192, 242),
                   borderRadius: BorderRadius.circular(2),
                 ),
                 child: Row(children: [
@@ -46,8 +46,8 @@ class ItemCart extends StatelessWidget {
                     padding: EdgeInsets.all(10),
                     margin: EdgeInsets.only(left: 8),
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 255, 211, 254),
-                      borderRadius: BorderRadius.circular(5),
+                      color: Color.fromARGB(255, 255, 162, 250),
+                      borderRadius: BorderRadius.circular(8),
                     ),
                     child: Image.asset("assets/images/${pnames[i]}.png"),
                   ),

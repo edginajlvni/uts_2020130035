@@ -25,7 +25,7 @@ class _LogInState extends State<LogIn> {
       //     BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
       //     BottomNavigationBarItem(icon: Icon(Icons.location_on), label: ''),
       //     BottomNavigationBarItem(icon: Icon(Icons.settings), label: ''),
-      //   ],
+      //   ], 
       //   currentIndex: _selectedIndex,
       //   backgroundColor: const Color.fromARGB(207, 232, 255, 254),
       //   selectedItemColor: const Color.fromARGB(255, 0, 81, 255),

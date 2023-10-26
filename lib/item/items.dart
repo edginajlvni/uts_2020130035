@@ -34,10 +34,10 @@ class Items extends StatelessWidget {
               margin: EdgeInsets.symmetric(vertical: 8, horizontal: 13),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Color.fromARGB(255, 248, 227, 248),
+                  color: Color.fromARGB(186, 255, 184, 255),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.4),
+                      color: Color.fromARGB(255, 231, 152, 214).withOpacity(0.4),
                       spreadRadius: 1,
                       blurRadius: 8,
                     ),
